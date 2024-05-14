@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        font-family: "Lucida Console", "Courier New", monospace;
+      }
+      body {
+        margin: 0 auto;
+        background-image: radial-gradient(
+          circle farthest-corner at 10% 20%,
+          rgba(14, 174, 87, 1) 0%,
+          rgba(12, 116, 117, 1) 90%
+        );
+        height: 800px;
+      }
+      div {
+        justify-content: space-between;
+        align-items: center;
+      }
+      header {
+        padding-top: 80px;
+        font-size: xx-large;
+        text-align: center;
+        margin-bottom: 100px;
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: white;
+        text-decoration-style:wavy;
+      }
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ffff;
+        background-image: radial-gradient(
+          circle farthest-corner at 10% 20%,
+          rgba(14, 174, 87, 1) 0%,
+          rgba(12, 116, 117, 1) 90%
+        );
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        border-radius: 10px;
+      }
+      .tab button:hover {
+        background-color: #87c375;
+        border-radius: 10px;
+      }
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+        border-radius: 10px;
+        animation: fadeEffect 1s;
+      }
+      @keyframes fadeEffect {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      p {
+        font-size: large;
+      }
+      input{
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: none;
+        height: 30px;
+        font-size: medium;
+        font-weight: bold;
+      }
+      textarea {
+        border-radius: 10px;
+        width: auto;
+        word-break: break-all;
+        font-size: medium;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header>Carla Caroline Emilio Meier</header>
+    <!--TabLinks-->
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Sobre') " id="default">Sobre</button>
+      <button class="tablinks" onclick="openTab(event, 'Experiencia')">
+        Experiências
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Linkedin')">
+        Linkedin
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Contato')">
+        Contato
+      </button>
+    </div>
+    <div id="Sobre" class="tabcontent">
+      <p>
+        Meu nome é Carla e sou estudante de Engenharia de Software na Uninter,
+        muito prazer! &#128640
+      </span>
+    </div>
+    <div id="Experiencia" class="tabcontent">
+      <p>
+        Tenho apenas um 1 ano de experiência em programação de sistemas, comecei
+        e sigo no momento como estágiaria. Sei falar em idioma inglês e um pouquinho de japonês. Também gosto muito de jogar nas horas vagas &#128513;
+      </p>
+    </div>
+    <div id="Linkedin" class="tabcontent">
+    &#128188;
+     <a href="http://www.linkedin.com/in/carla-caroline-e-239253a2/" target="_blank">Clique para visualizar meu Linkedin 
+     </a>
+    </div>
+    <!---Tab para contato-->
+    <div id="Contato" class="tabcontent">
+      <form>
+      <label for="email">E-mail: </label><br>
+      <input type="email" id="email" email="email"><br>
+      <label for="message">Deixe sua mensagem: </label><br>
+      <textarea id="message" name="mensagem" cols="80" rows="5">Insira sua mensagem aqui</textarea>
+      <br>
+      <input type="submit" value="Enviar">
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
